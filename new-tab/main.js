@@ -83,6 +83,17 @@ reset.addEventListener('click', () => {
     }
 })
 
+function newupdate() {
+    alert("A new version is available! - Download at https://github.com/pandadevv5495/skhelpfork/releases");
+}
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.updateAvailable) {
+        newupdate();
+    }
+});
+
+
+
 new DragController(move);
 new FullscreenController(fullscreen);
 new BatteryDisplay(battery);
