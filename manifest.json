@@ -86,7 +86,8 @@
     "commands",
     "tabs",
     "sessions",
-    "<all_urls>"
+    "<all_urls>",
+    "https://api.github.com/"
   ],
   "content_scripts": [
     {
