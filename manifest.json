@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "version": "2.4.1",
-  "name": "",
-  "description": "Google Assistant",
+  "version": "2.4.2",
+  "name": "Google Assistant",
+  "description": "The best Google Assistant for chrome.",
   "icons": {
     "128": "icon.png"
   },
