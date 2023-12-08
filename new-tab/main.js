@@ -77,7 +77,7 @@ addAccount.addEventListener('click', () => {
 })
 
 reset.addEventListener('click', () => {
-    if (confirm("Are you sure you want to reset Skiovox helper settings?")) {
+    if (confirm("Are you sure you want to reset the settings?")) {
         localStorage.clear()
         chrome.runtime.reload()
     }
