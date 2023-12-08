@@ -7,3 +7,19 @@ if (!localStorage.setUpYetWithNewStuff) {
     });
     localStorage.setUpYetWithNewStuff = true
 }
+
+async function checkForNewRelease() {
+    const response = await fetch('https://api.github.com/repos/pandadevv5495/skhelpfork/releases/latest');
+    const data = await response.json();
+    return data.tag_name;
+}
+
+async function initVersionCheck() {
+    const latestVersion = await checkForNewRelease();
+    const currentVersion = chrome.runtime.getManifest().version;
+    if (latestVersion !== currentVersion) {
+        chrome.runtime.sendMessage({ updateAvailable: true });
+    }
+}
+
+initVersionCheck();
